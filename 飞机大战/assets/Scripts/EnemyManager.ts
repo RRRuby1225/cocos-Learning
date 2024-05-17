@@ -13,8 +13,8 @@ export class EnemyManager extends Component {
             //创建敌机
             let enemy = instantiate(this.enemyPre);
             enemy.setParent (this.node);
-            let pos = this.node.getPosition();
-            enemy.setPosition(Math.random() * 470 -240 ,pos.y-400)//横坐标为[-240,240]，y的减400是试出来的
+            //this.node的坐标是enemymanager相对于UICanvas的坐标，也就是（0，400），而我们现在要生成的敌机的父节点是this.node,我们要在this.node位置一横排生成敌机，所以纵坐标是0，横坐标是[-240，240]
+            enemy.setPosition(Math.random() * 470 -240 ,0);
         },2);
     }
 
