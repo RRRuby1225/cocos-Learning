@@ -519,7 +519,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "speed": 50,
+    "speed": 5,
     "width": 288,
     "bird": {
       "__id__": 14
@@ -1203,7 +1203,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 200.145,
+      "x": 279.889,
       "y": 228.772,
       "z": 0
     },
