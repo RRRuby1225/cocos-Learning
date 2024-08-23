@@ -1,39 +1,29 @@
-import { _decorator, Component, EventMouse, input, Input, log} from 'cc';
-import { BirdControl } from './BirdControl';
+import { _decorator, Component, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('BgControl')
-export class BgControl extends Component {
-    //方便在面板修改
-    @property
-    speed:number = 4;
-    @property
-    width:number = 228;
-    @property({type:BirdControl})
-    bird:BirdControl = null;
-    
+@ccclass('bgControl')
+export class bgControl extends Component {
     start() {
-        //鼠标事件监听
-        for (let item of this.node.children){
-            item.on(Input.EventType.MOUSE_DOWN, (event) =>{ // Node.EventType.MOUSE_DOWN报错
-                this.bird.fly();
-            });
-        }
-        
+
     }
 
     update(deltaTime: number) {
-        //背景 （目前有黑线）
-        for(let item of this.node.children){
-            let x = item.position.x;
-            let y = item.position.y;
+        //遍历子物体（即2个背景图片）
+        for(let bgNode of this.node.children){
             //移动
-            item.setPosition(x-this.speed*deltaTime,y);
-            //循环
-            if (x<=-this.width){
-                x+=2*this.width-1;//直接在setPosition里赋值有黑线，不-1也有黑线
-                item.setPosition(x,y);
+            let bg_y = bgNode.position.y;
+            bgNode.setPosition(0,bg_y-50*deltaTime);
+
+            //第一张背景完全移动出画面时，就把它放到第二张的上面
+            if (bgNode.position.y <= -800){
+                bgNode.setPosition(0,800);
             }
+
+
+
         }
+
     }
 }
+
+

@@ -2,8 +2,9 @@
   "__version__": "1.0.6",
   "general": {
     "designResolution": {
-      "width": 288,
-      "height": 512
+      "width": 480,
+      "height": 800
     }
-  }
+  },
+  "custom_joint_texture_layouts": []
 }

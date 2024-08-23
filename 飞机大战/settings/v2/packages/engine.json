@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.9",
+  "__version__": "1.0.8",
   "modules": {
     "cache": {
       "base": {
@@ -120,9 +120,6 @@
       },
       "custom-pipeline": {
         "_value": false
-      },
-      "graphics": {
-        "_value": true
       }
     },
     "includeModules": [
@@ -134,7 +131,6 @@
       "gfx-webgl",
       "gfx-webgl2",
       "intersection-2d",
-      "meshopt",
       "particle-2d",
       "physics-2d-box2d",
       "profiler",
