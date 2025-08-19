@@ -1,6 +1,6 @@
 # cocos-Learning
 **根据b站 Gamer飞羽的 Cocos Creator教程 自己写的3.8版本的代码 以及所有项目资源**  
-**目前学习到p59，如果能够帮助到你，请点点star我会持续更新......**  
+**如果能够帮助到你，请点点star**  
 
 ## 对话框练习 3.8.4
 ![image](https://github.com/user-attachments/assets/2d646128-5348-4514-886e-916d8482eeb4)
